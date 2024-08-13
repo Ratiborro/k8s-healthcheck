@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: healthcheck-ingress
-  namespace: m
 spec:
   ingressClassName: nginx
   rules:
@@ -15,4 +14,4 @@ spec:
               service:
                 name: healthcheck-service
                 port:
-                  number: 80
+                  number: 8000
